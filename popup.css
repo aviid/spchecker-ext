@@ -1,0 +1,186 @@
+.pw3909093{
+     width: 350px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Professional Password Checker Styles */
+.password-checker-popup {
+    position: fixed !important;
+    z-index: 2147483647 !important;
+    max-width: 320px !important;
+    min-width: 280px !important;
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 8px !important;
+    padding: 12px 16px !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    color: #1f2937 !important;
+    margin: 0 !important;
+    animation: popupSlideIn 0.2s ease-out !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+}
+
+@keyframes popupSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.password-checker-popup * {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+}
+
+.popup-content {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+}
+
+.popup-message {
+    flex: 1 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
+
+.popup-message small {
+    display: block !important;
+    font-size: 12px !important;
+    margin-top: 4px !important;
+    opacity: 0.8 !important;
+    line-height: 1.4 !important;
+}
+
+/* Status Icons */
+.password-checker-popup::before {
+    content: '' !important;
+    width: 20px !important;
+    height: 20px !important;
+    flex-shrink: 0 !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* LEAKED - Red Warning */
+.password-checker-popup.leaked {
+    border-left: 4px solid #dc2626 !important;
+    background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%) !important;
+    color: #7f1d1d !important;
+}
+
+.password-checker-popup.leaked::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23dc2626'%3E%3Cpath d='M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1H9L3 7V9H21ZM3 10V22H21V10H3Z'/%3E%3C/svg%3E") !important;
+}
+
+.password-checker-popup.leaked .popup-message strong {
+    color: #dc2626 !important;
+    font-weight: 600 !important;
+}
+
+/* SAFE - Green Success */
+.password-checker-popup.safe {
+    border-left: 4px solid #059669 !important;
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%) !important;
+    color: #065f46 !important;
+}
+
+.password-checker-popup.safe::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23059669'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") !important;
+}
+
+/* WEAK - Orange Warning */
+.password-checker-popup.weak {
+    border-left: 4px solid #d97706 !important;
+    background: linear-gradient(135deg, #fffbeb 0%, #fed7aa 100%) !important;
+    color: #78350f !important;
+}
+
+.password-checker-popup.weak::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d97706'%3E%3Cpath d='M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 16h2v2h-2zm0-6h2v4h-2z'/%3E%3C/svg%3E") !important;
+}
+
+/* LOADING - Blue Info */
+.password-checker-popup.loading {
+    border-left: 4px solid #2563eb !important;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%) !important;
+    color: #1e40af !important;
+}
+
+.password-checker-popup.loading::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z'/%3E%3C/svg%3E") !important;
+    animation: spin 1s linear infinite !important;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Strength Indicators */
+.strength-indicator {
+    display: inline-block !important;
+    margin-left: 8px !important;
+    padding: 2px 8px !important;
+    border-radius: 12px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+.strength-very-weak { background: #dc2626 !important; color: white !important; }
+.strength-weak { background: #d97706 !important; color: white !important; }
+.strength-fair { background: #ca8a04 !important; color: white !important; }
+.strength-good { background: #16a34a !important; color: white !important; }
+.strength-strong { background: #059669 !important; color: white !important; }
+.strength-very-strong { background: #047857 !important; color: white !important; }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .password-checker-popup {
+        max-width: 280px !important;
+        font-size: 13px !important;
+        padding: 10px 12px !important;
+        margin: 0 8px !important;
+    }
+    
+    .password-checker-popup::before {
+        width: 18px !important;
+        height: 18px !important;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .password-checker-popup {
+        border-width: 2px !important;
+        box-shadow: 0 0 0 2px currentColor !important;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .password-checker-popup {
+        animation: none !important;
+    }
+    
+    .password-checker-popup.loading::before {
+        animation: none !important;
+    }
+}

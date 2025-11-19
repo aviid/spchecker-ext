@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="pw3909093">
+        <h3>Password Security</h3>
+        <div id="status" class="status">
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                Checking password...
+            </div>
+            <div id="result" class="result">
+                <!-- Results will appear here -->
+            </div>
+        </div>
+        <div class="strength-meter">
+            <div class="strength-bar">
+                <div id="strength-fill" class="strength-fill"></div>
+            </div>
+            <div id="strength-text" class="strength-text">Enter password to check</div>
+        </div>
+        <div class="tips">
+            <strong>Tips for strong passwords:</strong>
+            <ul>
+                <li>Use at least 12 characters</li>
+                <li>Include numbers, symbols, uppercase & lowercase</li>
+                <li>Avoid common words & patterns</li>
+            </ul>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
