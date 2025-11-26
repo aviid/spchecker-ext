@@ -1,8 +1,7 @@
 # SPChecker - Real-time Password Strength & Breach Checker
 
-![SPChecker Banner Bank](https://i.postimg.cc/pdqQjYWv/bank-pass.png)
-![SPChecker Banner facebook](https://i.postimg.cc/8C1BsnSp/fb-pass.png)
-![SPChecker Banner Hotmail](https://i.postimg.cc/0N8drHsP/hot-pass.png)
+![SPChecker Banner](https://i.postimg.cc/59CVsshx/spchecker-ext-banner.jpg)
+
 
 A Chrome extension that provides real-time password strength analysis and breach detection while users type their passwords.
 
